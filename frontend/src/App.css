@@ -1,0 +1,106 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 98%;
+  margin: 0 auto;
+}
+
+.form,
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 3px;
+  border: 1px solid #b4b2b2;
+  border-radius: 3px;
+  margin-bottom: 3px;
+  font-family: inherit;
+}
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 4px 4px;
+}
+.btn {
+  padding: 0.5em;
+  border: 1px solid #535353;
+  border-radius: 3px;
+  background: #2e2121;
+  width: 100%;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn svg {
+  margin-right: 2px;
+}
+.btn-reverse {
+  background: #fff;
+  color: #a3a3a3;
+}
+.btn-block {
+  width: 90%;
+  margin-bottom: 3px;
+}
+.btn:hover {
+  transform: scale(20%);
+}
+.tasks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.task {
+  background-color: #f4f4f4;
+  margin: 10px 0;
+  padding: 20px 0 10px;
+  position: relative;
+}
+
+.spinner-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
